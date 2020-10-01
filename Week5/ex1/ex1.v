@@ -1,0 +1,26 @@
+module ex1(
+	input [1:0] sel,
+	input [3:0] in_pin,
+	output reg out_pin
+);
+
+always @(*)
+	case(sel)
+		2'b00:
+			begin
+				out_pin = in_pin[0];
+			end
+		2'b01:
+			begin
+				out_pin = in_pin[1];
+			end
+		2'b10:
+			begin
+				out_pin = in_pin[2];
+			end	
+		2'b11:
+			begin
+				out_pin = in_pin[3];
+			end
+	endcase
+endmodule
